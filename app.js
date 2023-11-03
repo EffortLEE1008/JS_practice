@@ -1,6 +1,3 @@
-alert("hello")
-
-
 console.log("hello");
 
 const a=10;
@@ -79,3 +76,35 @@ calculate.plus(1,2);
 calculate.minus(1,2);
 calculate.multiple(3,4);
 calculate.divide(10,4);
+
+
+function calculateKorAge(birth){
+    return 2023-birth+2;
+
+}
+
+const korAge = calculateKorAge(1995);
+
+console.log(korAge);
+
+function voidValue(age){
+    console.log(age+10);
+
+}
+
+voidValue(10);
+
+
+let arr= [1,2,3,4,5];
+
+function change(arr, pos, val){
+    arr[pos]=val;
+}
+
+change(arr, 2, 10);
+
+console.log(arr);
+
+const myAge = parseInt(prompt("How old are you"));
+
+console.log(myAge);
