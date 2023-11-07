@@ -108,3 +108,7 @@ console.log(arr);
 const myAge = parseInt(prompt("How old are you"));
 
 console.log(myAge);
+
+const k_age = prompt("age?");
+
+console.log(isNaN(k_age));
