@@ -105,10 +105,20 @@ change(arr, 2, 10);
 
 console.log(arr);
 
-const myAge = parseInt(prompt("How old are you"));
 
-console.log(myAge);
 
-const k_age = prompt("age?");
+const k_age = parseInt(prompt("age?"));
 
-console.log(isNaN(k_age));
+if(isNaN(k_age)|| k_age<=0){
+
+    console.log("pleas write a real positive number");
+} else if(k_age<18){
+    console.log("your too young");
+
+}else if(k_age===20){
+    console.log("good age");
+} else if(k_age<30){
+    console.log("your very good age");
+} else{
+    console.log("your very old sorry");
+}
