@@ -127,10 +127,26 @@ const title = document.getElementById("title");
 
 const hellos = document.getElementsByClassName("hello");
 
-const titles = document.querySelector("div h1");
+const titles = document.querySelector("#title2 h1");
 
 console.log(title.id);
 console.log(title.className);
 
-console.log(hellos);
-console.log(titles)
+let sw = false;
+
+
+function handleTitleClick(){
+    if(sw){
+        titles.style.color = "blue";
+        sw=false;
+    }
+    else if(!sw){
+        titles.style.color="red";
+        sw = true;
+    }
+    
+}
+
+titles.style.color = "blue";
+console.log(typeof(titles));
+titles.addEventListener("click", handleTitleClick);
