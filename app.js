@@ -107,18 +107,30 @@ console.log(arr);
 
 
 
-const k_age = parseInt(prompt("age?"));
+// const k_age = parseInt(prompt("age?"));
 
-if(isNaN(k_age)|| k_age<=0){
+// if(isNaN(k_age)|| k_age<=0){
 
-    console.log("pleas write a real positive number");
-} else if(k_age<18){
-    console.log("your too young");
+//     console.log("pleas write a real positive number");
+// } else if(k_age<18){
+//     console.log("your too young");
 
-}else if(k_age===20){
-    console.log("good age");
-} else if(k_age<30){
-    console.log("your very good age");
-} else{
-    console.log("your very old sorry");
-}
+// }else if(k_age===20){
+//     console.log("good age");
+// } else if(k_age<30){
+//     console.log("your very good age");
+// } else{
+//     console.log("your very old sorry");
+// }
+
+const title = document.getElementById("title");
+
+const hellos = document.getElementsByClassName("hello");
+
+const titles = document.querySelector("div h1");
+
+console.log(title.id);
+console.log(title.className);
+
+console.log(hellos);
+console.log(titles)
