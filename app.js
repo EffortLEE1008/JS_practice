@@ -127,7 +127,7 @@ const title = document.getElementById("title");
 
 const hellos = document.getElementsByClassName("hello");
 
-const titles = document.querySelector("#title2 h1");
+const h1 = document.querySelector("#title2 h1");
 
 console.log(title.id);
 console.log(title.className);
@@ -137,16 +137,48 @@ let sw = false;
 
 function handleTitleClick(){
     if(sw){
-        titles.style.color = "blue";
+        h1.style.color = "blue";
         sw=false;
     }
     else if(!sw){
-        titles.style.color="red";
+        h1.style.color="red";
         sw = true;
     }
     
 }
 
-titles.style.color = "blue";
-console.log(typeof(titles));
-titles.addEventListener("click", handleTitleClick);
+function handleMouseEnter(){
+    h1.innerText = " mouse is here!";
+}
+
+function handleMouseLeave(){
+    h1.innerText = " mouse is gone!";
+}
+
+function handleWindowResize(){
+    document.body.style.backgroundColor = "tomato";
+}
+
+function handleWindowCopy(){
+    alert("copier");
+}
+
+function handleWindowOffLine(){
+    alert("SOS no Wifi");
+}
+
+function handleWindowOnline(){
+    alert("ALL good");
+}
+
+h1.style.color = "blue";
+console.dir(h1);
+console.log(typeof(h1));
+h1.addEventListener("click", handleTitleClick);
+h1.addEventListener("mouseenter",handleMouseEnter);
+h1.addEventListener("mouseleave", handleMouseLeave);
+
+//window.addEventListener("resize", handleWindowResize);
+window.addEventListener("copy", handleWindowCopy);
+window.addEventListener("offline", handleWindowOffline);
+window.addEventListener("online", handleWindowOnline);
